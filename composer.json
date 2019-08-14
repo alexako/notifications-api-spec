@@ -1,0 +1,12 @@
+{
+    "name": "ffuf/ffuf-notifications-api-spec",
+    "type": "library",
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "spec\\ffuf\\notifications\\api\\": ""
+        }
+    }
+}
