@@ -17,4 +17,15 @@ interface NotificationServiceInterface {
      * @return \spec\ffuf\notifications\api\model\notification\Notification[]
      */
     public function getAll($firstResultId = 0, $maxResults = 100);
+
+    /**
+     * @param string $notificationId
+     * @return \spec\ffuf\notifications\api\model\notification\Notification
+     */
+    public function getById($notificationId);
+
+    /**
+     * @param string $notificationId
+     */
+    public function remove($notificationId);
 }

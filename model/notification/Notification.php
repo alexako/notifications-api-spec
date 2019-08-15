@@ -13,7 +13,17 @@ class Notification {
     /**
      * @var string
      */
+    private $expire;
+
+    /**
+     * @var string
+     */
     private $id;
+
+    /**
+     * @var integer
+     */
+    private $notificationType;
 
     /**
      * @var string
@@ -30,8 +40,22 @@ class Notification {
     /**
      * @return string
      */
+    public function getExpire() {
+        return $this->expire;
+    }
+
+    /**
+     * @return string
+     */
     public function getId() {
         return $this->id;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getNotificationType() {
+        return $this->notificationType;
     }
 
     /**
@@ -47,6 +71,24 @@ class Notification {
      */
     public function setContent($content = null) {
         $this->content = $content;
+        return $this;
+    }
+
+    /**
+     * @param string $expire
+     * @return self
+     */
+    public function setExpire($expire = null) {
+        $this->expire = $expire;
+        return $this;
+    }
+
+    /**
+     * @param integer $notificationType
+     * @return self
+     */
+    public function setNotificationType($notificationType = null) {
+        $this->notificationType = $notificationType;
         return $this;
     }
 

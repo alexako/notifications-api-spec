@@ -43,4 +43,19 @@ class Notification {
         $maxResults = $this->request->query->get('maxResults', 100);
         return $this->service->getAll($firstResultId, $maxResults);
     }
+
+    /**
+     * @param string $notificationId
+     * @return \spec\ffuf\notifications\api\model\notification\Notification
+     */
+    public function getById($notificationId) {
+        return $this->service->getById($notificationId);
+    }
+
+    /**
+     * @param string $notificationId
+     */
+    public function remove($notificationId) {
+        return $this->service->remove($notificationId);
+    }
 }
