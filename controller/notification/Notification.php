@@ -58,4 +58,11 @@ class Notification {
     public function remove($notificationId) {
         return $this->service->remove($notificationId);
     }
+
+    /**
+     * @return \spec\ffuf\notifications\api\model\notification\Notification
+     */
+    public function trigger() {
+        return $this->service->trigger();
+    }
 }
