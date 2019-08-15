@@ -28,4 +28,9 @@ interface NotificationServiceInterface {
      * @param string $notificationId
      */
     public function remove($notificationId);
+
+    /**
+     * @return \spec\ffuf\notifications\api\model\notification\Notification
+     */
+    public function trigger();
 }
