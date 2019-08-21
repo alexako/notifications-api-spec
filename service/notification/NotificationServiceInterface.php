@@ -32,5 +32,17 @@ interface NotificationServiceInterface {
     /**
      * @return \spec\ffuf\notifications\api\model\notification\Notification
      */
+    public function removeSent();
+
+    /**
+     * @return \spec\ffuf\notifications\api\model\notification\Notification
+     */
     public function trigger();
+
+    /**
+     * @param \spec\ffuf\notifications\api\model\notification\Notification $notification
+     * @param string $notificationId
+     * @return \spec\ffuf\notifications\api\model\notification\Notification
+     */
+    public function update(\spec\ffuf\notifications\api\model\notification\Notification $notification, $notificationId);
 }

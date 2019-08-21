@@ -62,7 +62,23 @@ class Notification {
     /**
      * @return \spec\ffuf\notifications\api\model\notification\Notification
      */
+    public function removeSent() {
+        return $this->service->removeSent();
+    }
+
+    /**
+     * @return \spec\ffuf\notifications\api\model\notification\Notification
+     */
     public function trigger() {
         return $this->service->trigger();
+    }
+
+    /**
+     * @param \spec\ffuf\notifications\api\model\notification\Notification $notification
+     * @param string $notificationId
+     * @return \spec\ffuf\notifications\api\model\notification\Notification
+     */
+    public function update(\spec\ffuf\notifications\api\model\notification\Notification $notification, $notificationId) {
+        return $this->service->update($notification, $notificationId);
     }
 }
